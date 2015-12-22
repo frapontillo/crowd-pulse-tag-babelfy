@@ -39,6 +39,10 @@ public class BabelfyTagger extends IPlugin<Message, Message, VoidConfig> {
         return PLUGIN_NAME;
     }
 
+    @Override public IPlugin<Message, Message, VoidConfig> getInstance() {
+        return new BabelfyTagger();
+    }
+
     @Override public VoidConfig getNewParameter() {
         return new VoidConfig();
     }
